@@ -15,10 +15,10 @@ skew:{x~_+/((+;-).\:(x;+x))%2.0}    /is x skew-symmetric (as a matrix)?
 irreflexive:{0~trace x}             /are no nodes self-adjacent?
 
 /see http://nsl.com/k9/trees.k and Aaron Hsu's paper
-depth:{+/+/''^(&x~\:!0)?/:(,/'x@)\!#x} /fixed adj list (of acyclic graph) -> terminal node distance (depth)
-ncl:{(x+1)#'+\x=/:\:!1+|/x}            /depth vector -> node coordinate list (0's ommitted)
-ncm:{((|+\)'d)*+\d:x=/:\:!1+|/x}       /depth vector -> node coordinate matrix
+depth:{+/+/''^(&x~\:!0)?(,/'fix[x]@)\!#x} /adj list (of acyclic graph) -> terminal node distance (depth)
+ncl:{(x+1)#'+\x=/:\:!1+|/x}               /depth vector -> node coordinate list (0's ommitted)
+ncm:{((|+\)'d)*+\d:x=/:\:!1+|/x}          /depth vector -> node coordinate matrix
 
-closure:{x|x(|/&)\:x}                  /transitive closure of adj matrix
-reduction:{x&~x(|/&)\:x|x(|/&)\:x}     /transitive reduction of adj matrix
+closure:{x|x(|/&)\:x}/                 /transitive closure of adj matrix
+reduction:{x&~x(|/&)\:closure x}       /transitive reduction of adj matrix
 refl:{:x[&'=#x]:0}                     /reflexive reduction of adj matrix
