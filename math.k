@@ -18,5 +18,4 @@ gpow:{z/((-1+#y){x[y;y]}[z]\x)@&|y:2\y} /fast powers given arbitrary multiplicat
 modexp:{(z!*)/((-1+#y){x!y*y}[z]\x)@&|y:2\y} /fast modular exponention
 
 foldr:{x({x[z;y]}[y].)/z}
-obliquegrp:{x ./:/:(+p)@/:.=+/p:!2##x} /oblique
-oblique:{(|l),'x,'l:(!#x)#'y}          /oblique matrix filled with id elem y
+oblique:{l,'x,'|l:(!#x)#'y}          /oblique matrix filled with id elem y
