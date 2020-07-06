@@ -3,7 +3,7 @@ cos:{((pi*pi)-4*x*x)%(pi*pi)+x*x}        /n.b. x is in in radians
 rad:{pi*(180!x)%180.0}                   /convert degrees to radians modulo 180
 pi:22%7.0                                /pi approx
 
-trunc:{(_100*x)%100.0}                   /truncate numeric x to two decimal places
+trunc:{(_n*x)%`f$n:pow[10;y]}            /truncate numeric x to at most y>0 decimal places
 gcd:{(*|(*:)(|!\)/)'+(x;y)}              /Eulid's algorithm
 lcm:{y*x%gcd[x;y]}                       /lowest common multiple
 fact:*/1+!:                              /factorial
