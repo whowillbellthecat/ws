@@ -16,7 +16,7 @@ irreflexive:{0~trace x}             /are no vertices self-adjacent?
 
 /see http://nsl.com/k9/trees.k and Aaron Hsu's paper
 depth:{+/+/''^(&x~\:!0)?(,/'fix[x]@)\!#x} /adj list (of acyclic graph) -> depth vector
-ncl:{(x+1)#'+\x=/:\:!1+|/x}               /depth vector -> node coordinate list (0's ommitted)
+ncl:{(x+1)#'+\x=/:\:!1+|/x}               /depth vector -> node coordinate list (0's omitted)
 ncm:{((|+\)'d)*+\d:x=/:\:!1+|/x}          /depth vector -> node coordinate matrix
 
 closure:{x|x(|/&)\:x}/                 /transitive closure of adj matrix
