@@ -4,7 +4,7 @@ rad:{pi*(180!x)%180.0}                   /convert degrees to radians modulo 180
 pi:22%7.0                                /pi approx
 
 trunc:{(_100*x)%100.0}                   /truncate numeric x to two decimal places
-gcd:*:|:(*:)(|:!\)/,                     /greatest common divisor
+gcd:{(*|(*:)(|!\)/)'+(x;y)}              /Eulid's algorithm
 lcm:{y*x%gcd[x;y]}                       /lowest common multiple
 fact:*/1+!:                              /factorial
 trace:{*+/x@'&'=#x}                      /sum of diagonal of matrix
